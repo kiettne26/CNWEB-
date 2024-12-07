@@ -1,0 +1,81 @@
+.blur-avatar {
+    transition: filter 0.3s ease;
+    filter: blur(1.5px);
+}
+
+/* .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    float: none;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    float: none;
+    position: relative;
+} */
+
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.toggleActiveSuccessfully {
+    background-color: #55ce63 !important;
+    border-color: #55ce63 !important;
+}
+
+.toggleBorderActiveSuccessfully {
+    border: 1px solid #55ce63 !important;
+}
+
+.toggleActiveFailed {
+    background-color: #fc133d !important;
+    border-color: #fc133d !important;
+}
+
+.toggleBorderActiveFailed {
+    border: 1px solid #fc133d !important;
+}
+
+.covered-in-avatar {
+    width: 120px;
+    height: 160px;
+    background-color: white;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HTML: <div class="loader"></div> */
+.avatar-loader {
+    width: 40px;
+    --b: 7px; 
+    aspect-ratio: 1;
+    border-radius: 50%;
+    padding: 1px;
+    background: conic-gradient(#0000 10%,#ff902f) content-box;
+    -webkit-mask:
+      repeating-conic-gradient(#0000 0deg,#000 1deg 20deg,#0000 21deg 36deg),
+      radial-gradient(farthest-side,#0000 calc(100% - var(--b) - 1px),#000 calc(100% - var(--b)));
+    -webkit-mask-composite: destination-in;
+            mask-composite: intersect;
+    animation:l4 1s infinite steps(10);
+  }
+  @keyframes l4 {to{transform: rotate(1turn)}}
