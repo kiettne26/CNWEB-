@@ -239,37 +239,37 @@
 	
 </style>
 <script>
-$(document).ready(function(){
-	// Activate tooltip
-	$('[data-toggle="tooltip"]').tooltip();
+	$(document).ready(function(){
+		// Activate tooltip
+		$('[data-toggle="tooltip"]').tooltip();
 
-	// Confirm delete
-	$('.delete-form').on('submit', function(e) {
-        e.preventDefault();
-        if(confirm('Bạn có chắc chắn muốn xóa bài viết này?')) {
-            this.submit();
-        }
-    });
-	
-	// Select/Deselect checkboxes
-	var checkbox = $('table tbody input[type="checkbox"]');
-	$("#selectAll").click(function(){
-		if(this.checked){
-			checkbox.each(function(){
-				this.checked = true;                        
-			});
-		} else{
-			checkbox.each(function(){
-				this.checked = false;                        
-			});
-		} 
+		// Confirm delete
+		$('.delete-form').on('submit', function(e) {
+			e.preventDefault();
+			if(confirm('Bạn có chắc chắn muốn xóa bài viết này?')) {
+				this.submit();
+			}
+		});
+		
+		// Select/Deselect checkboxes
+		var checkbox = $('table tbody input[type="checkbox"]');
+		$("#selectAll").click(function(){
+			if(this.checked){
+				checkbox.each(function(){
+					this.checked = true;                        
+				});
+			} else{
+				checkbox.each(function(){
+					this.checked = false;                        
+				});
+			} 
+		});
+		checkbox.click(function(){
+			if(!this.checked){
+				$("#selectAll").prop("checked", false);
+			}
+		});
 	});
-	checkbox.click(function(){
-		if(!this.checked){
-			$("#selectAll").prop("checked", false);
-		}
-	});
-});
 </script>
 </head>
 <body>
