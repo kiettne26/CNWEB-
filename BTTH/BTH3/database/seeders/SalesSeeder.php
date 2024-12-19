@@ -17,7 +17,7 @@ class SalesSeeder extends Seeder
         $faker = Faker::create();
         for ($i = 0; $i < 20; $i++) {
             DB::table('sales')->insert([
-                'medicine_id' => $faker->numberBetween(1, 10), // Assuming you have 10 medicines seeded
+                'medicine_id' => $faker->numberBetween(1, 10),
                 'quantity' => $faker->numberBetween(1, 10),
                 'sale_date' => $faker->dateTimeBetween('-1 month', 'now'),
                 'customer_phone' => $faker->phoneNumber(), 
