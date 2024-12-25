@@ -36,7 +36,6 @@ class IssueController extends Controller
             'computer_id' => 'required',
             'reported_by' => 'required|max:50',
             'reported_date' => 'required|date',
-            'description' => 'required',
             'urgency' => 'required|in:Low,Medium,High',
             'status' => 'required|in:Open,In Progress,Resolved',
         ]);
@@ -73,7 +72,6 @@ class IssueController extends Controller
             'computer_id' => 'required',
             'reported_by' => 'required|max:50',
             'reported_date' => 'required|date',
-            'description' => 'required',
             'urgency' => 'required|in:Low,Medium,High',
             'status' => 'required|in:Open,In Progress,Resolved',
         ]);
@@ -83,7 +81,7 @@ class IssueController extends Controller
         // update
         $issue->update($request->all());
         // return index sau khi chỉnh
-        return redirect()->route('issues.index')->with('success', 'CCập nhật thành công');
+        return redirect()->route('issues.index')->with('success', 'Cập nhật thành công');
     }
 
     /**
